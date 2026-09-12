@@ -6,13 +6,13 @@
 
 | STT | Họ và tên | Mã học viên | Vai trò trong nhóm (VD: facilitator, workflow, research, writer) |
 |-----|-----------|-------------|---------------------------------------------------------------|
-| 1   |           |             |                                                               |
-| 2   |           |             |                                                               |
-| 3   |           |             |                                                               |
-| 4   |           |             |                                                               |
+| 1   | Trần Tuấn Hoàng | 2A202602832 | Facilitator |
+| 2   | Lục Tiến Đạt | 2A202602969 | Research, Writer |
+| 3   | Nguyễn Minh Ngọc | 2A202602530 | Research, Writer |
+| 4   | Nguyễn Tiến Lượng | 2A202602378 | Research, Writer |
 
 **Candidate problem nhóm chọn (1 câu):**
-
+Bot tự động gom và tra cứu quyết định chốt đồ án trong nhóm chat
 
 ---
 
@@ -22,12 +22,12 @@
 
 | # | Người đưa ra | Candidate problem | Người gặp vấn đề | Điểm nghẽn | Cảm nhận nhanh của nhóm |
 |---|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Trần Tuấn Hoàng | Tinh chỉnh và viết lại CV thủ công để khớp với mô tả công việc (JD) của từng vị trí tốn quá nhiều thời gian. | Sinh viên năm 3-4 / mới tốt nghiệp ngành CNTT (Data/AI/Backend). | Khâu diễn đạt lại ý đã có sẵn cho khớp từ khóa JD, tốn 45-60 phút chỉ để tinh chỉnh từ khóa cho 1 CV. | Dạng Workflow - Bài toán có scope gọn, dễ so sánh giữa việc tự làm và dùng AI, giúp rút ngắn thời gian chuẩn bị hồ sơ. |
+| 2 | Trần Tuấn Hoàng | Lừa đảo tài chính qua điện thoại tinh vi, ép chuyển tiền hoặc cung cấp OTP, vượt qua các bộ lọc số điện thoại truyền thống. | Người dùng điện thoại (đặc biệt là người lớn tuổi, ít am hiểu công nghệ). | Việc tự đánh giá rủi ro phụ thuộc vào tâm lý người dùng, trong khi hệ thống chặn theo Blacklist luôn đi sau kẻ lừa đảo. | Dạng Agent - Có giá trị thực tiễn và impact xã hội rất cao, thể hiện rõ giới hạn của hệ thống phòng vệ cũ. |
+| 3 | Trần Tuấn Hoàng | Đọc và tổng hợp bài báo nghiên cứu chuyên sâu mất quá nhiều thời gian để nắm bắt kiến trúc mô hình và các điểm hạn chế (limitation). | Sinh viên, người làm nghiên cứu. | Đọc hiểu phương pháp và tìm limitation thường bị viết rải rác, ẩn ý trong bài, tốn rất nhiều thời gian đọc kỹ. | Dạng Workflow - Nỗi đau có thật và lặp lại liên tục, đo lường được impact trực tiếp thông qua thời gian tiết kiệm được. |
+| 4 | Lục Tiến Đạt | Tân binh / thành viên mới trong CLB Lập trình liên tục hỏi trùng lặp các câu hỏi về lịch sinh hoạt, cách cài môi trường VS Code/Git, link drive mẫu. | Ban Chuyên môn CLB IT / Mentor sinh viên khóa trên. | Nhận 10-15 câu hỏi giống nhau mỗi tuần trên kênh Discord CLB; tốn 10-15 phút/lần gõ lại câu trả lời hoặc tìm link cũ dán lại; tổng mất ~3 tiếng/tuần. | |
+| 5 | Lục Tiến Đạt | Hai bạn làm Frontend & Backend ghép code bị lỗi integration do lệch quy chuẩn API contract (JSON response field name) không được ghi chép rõ. | Sinh viên CS làm đồ án tích hợp Fullstack / AI Web App. | Xảy ra ở 100% buổi ghép code nhóm; mất 2-3 tiếng ngồi refactor lại DTO/API payload và debug lỗi `500 Internal Server Error` do lệch tên biến. | |
+| 6 | Lục Tiến Đạt | Nhóm họp online (Google Meet/Teams) 45-60 phút thảo luận nhiều ý tưởng nhưng không ai ghi chép Meeting Minutes, sau họp không nhớ rõ Action Items. | Tất cả thành viên nhóm đồ án môn học. | Họp 2 buổi/tuần (45 phút/buổi); sau họp tốn thêm 20 phút nhắn hỏi lại "Hôm nay chốt ai làm gì?"; 30% công việc thảo luận bị bỏ sót không ai thực hiện. | |
 | 7 | | | | | |
 | 8 | | | | | |
 | 9 | | | | | |
