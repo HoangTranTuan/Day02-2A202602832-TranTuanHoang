@@ -27,14 +27,14 @@
 > Gợi ý tự soi: tuần trước mất nhiều thời gian nhất vào việc gì? Việc gì hay trì hoãn? Người khác hay hỏi lại câu gì? Workflow nào ai cũng biết là chậm?
 
 **AI đã dùng ở Phase 1 (nếu có):**
-- Prompt đã hỏi:
-- Ý dùng được:
-- Ý bỏ vì không phải pain thật:
+- Prompt đã hỏi: Đưa ra 8 vấn đề liên quan tới các lĩnh vực lừa đảo, học tập, công việc, thực tập
+- Ý dùng được: Hầu hết các ý đều dùng được
+- Ý bỏ vì không phải pain thật: Bỏ ý liên quan tới nộp hồ sơ dự giải.
 
 **Self-check Phase 1:**
-- [ ] Đủ 5+ dòng, mỗi dòng có actor + số đo cụ thể
-- [ ] Dùng ít nhất 3/4 lăng kính
-- [ ] Không có dòng chung chung kiểu "mất nhiều thời gian"
+- [x] Đủ 5+ dòng, mỗi dòng có actor + số đo cụ thể
+- [x] Dùng ít nhất 3/4 lăng kính
+- [x] Không có dòng chung chung kiểu "mất nhiều thời gian"
 
 ---
 
