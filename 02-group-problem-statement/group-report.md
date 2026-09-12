@@ -42,23 +42,37 @@
 ### 3.3. Shortlist (giữ 2-3 bài trả lời được 7 câu hỏi worksheet)
 
 | Candidate | Vì sao vào shortlist (2-3 ý) | Rủi ro / điều chưa rõ |
-| --------- | ---------------------------- | --------------------- |
-|           |                              |                       |
-|           |                              |                       |
-|           |                              |                       |
+| --- | --- | --- |
+| **Candidate 10 (Tinh chỉnh CV thủ công theo JD)** | - Workflow cực kỳ rõ ràng (Đọc JD -> Lọc kỹ năng -> Viết lại diễn đạt).<br>- Điểm nghẽn dễ định lượng (giảm từ 45-60 phút xuống dưới 15 phút).<br>- Impact thực tiễn cao, phục vụ tệp người dùng lớn (sinh viên mới ra trường/dev trẻ). | - Ranh giới kiểm soát để AI không "bịa" (hallucinate) kỹ năng ứng viên không có.<br>- Chưa rõ việc rút ngắn thời gian có thực sự tăng tỷ lệ pass hồ sơ hay chỉ dẫn đến việc spam CV. |
+| **Candidate 12 (Trích xuất Limitation từ bài báo nghiên cứu)** | - Nỗi đau lặp lại liên tục với tần suất cao trong giới học thuật và nghiên cứu.<br>- Luồng trích xuất thông tin rất cụ thể (Abstract -> Methodology -> Limitation).<br>- Dễ dàng chứng minh tính hiệu quả bằng số giờ đọc được cắt giảm. | - Các bài báo chuyên sâu chứa nhiều công thức toán học/kiến trúc phức tạp có thể khiến công cụ đọc PDF phân tích sai ngữ cảnh.<br>- Rủi ro AI trích xuất sai bản chất hạn chế của mô hình. |
+| **Candidate 4 (Thông tin báo lỗi từ team monitor thiếu chi tiết)** | - Vấn đề B2B rất thực tế trong quy trình phát triển phần mềm hàng ngày.<br>- Đầu vào (tin nhắn/log lộn xộn) và đầu ra (form báo lỗi chuẩn hóa) được định nghĩa rất chặt chẽ, cực kỳ phù hợp để LLM xử lý.<br>- Tiết kiệm 10-20 phút giao tiếp dư thừa cho mỗi lỗi phát sinh. | - Để có giá trị thực tiễn, giải pháp bắt buộc phải tích hợp thẳng vào nền tảng nội bộ (Slack/Teams/Jira). Nếu làm web app rời, developer/monitor sẽ lười sử dụng. |
 
 ### 3.4. Score để đồng thuận (chấm 1-5, ép nói rõ vì sao cho 5 / cho 3)
 
 | Candidate | Actor rõ | Workflow rõ | Pain có evidence | Impact đo được | Làm trong lab | So sánh R/W/A được | Nhóm hiểu domain | Tổng |
 | --------- | -------: | ----------: | ---------------: | -------------: | ------------: | -----------------: | ---------------: | ---: |
-|           |          |             |                  |                |               |                    |                  |      |
-|           |          |             |                  |                |               |                    |                  |      |
-|           |          |             |                  |                |               |                    |                  |      |
+| **Candidate 10** (Tinh chỉnh CV) | 5 | 5 | 4 | 5 | 5 | 4 | 5 | 33 |
+| **Candidate 12** (Trích xuất từ paper) | 4 | 4 | 4 | 5 | 4 | 4 | 5 | 30 |
+| **Candidate 4** (Báo lỗi thiếu chi tiết)| 5 | 5 | 5 | 4 | 3 | 5 | 4 | 31 |
+
+#### Giải thích chi tiết các điểm 5 và 3:
+
+**1. Candidate 10 (Tinh chỉnh CV thủ công theo JD):**
+- **Cho 5 (Actor, Workflow, Impact, Domain):** Vấn đề cực kỳ gần gũi với toàn bộ thành viên nhóm. Luồng công việc trực quan (đọc JD -> tìm kỹ năng -> viết lại diễn đạt). Impact đo lường được ngay bằng phút (giảm từ 60' xuống 15'). 
+- **Cho 5 (Làm trong lab):** Bài toán text-to-text thuần túy, cực kỳ khả thi để làm bản MVP nhanh bằng các kỹ thuật Prompt Chain cơ bản mà không cần setup môi trường phức tạp.
+
+**2. Candidate 12 (Trích xuất Limitation từ bài báo nghiên cứu):**
+- **Cho 5 (Impact):** Rút ngắn được hàng giờ đồng hồ "cày" các bài báo khoa học phức tạp, giá trị tiết kiệm thời gian là rất lớn.
+- **Cho 5 (Nhóm hiểu domain):** Nhóm có thành viên xuất thân từ khoa Toán Tin, trực tiếp nghiên cứu sâu về các kiến trúc học máy phức tạp, mô hình dự báo chuỗi thời gian nên việc phải đọc hiểu và bóc tách cấu trúc paper diễn ra liên tục, đảm bảo độ thấu hiểu bài toán sâu sắc để làm mượt luồng UX.
+
+**3. Candidate 4 (Thông tin báo lỗi từ team monitor thiếu chi tiết):**
+- **Cho 5 (Actor, Workflow, Evidence, So sánh R/W/A):** Vấn đề quy trình cực chuẩn xác, evidence rõ ràng từ lịch sử chat. Trục so sánh rất tuyệt vời (Rule: Bắt điền form cứng -> Workflow: AI tự đọc log trích xuất form -> Agent: AI tự động ping hỏi lại dev đúng những trường thông tin còn thiếu).
+- **Cho 3 (Làm trong lab):** Để demo có tính thuyết phục, bài này đòi hỏi phải giả lập môi trường giao tiếp thực tế (mockup webhook của Slack/Teams) và setup các cục log hệ thống mẫu. Rủi ro tốn thời gian cấu hình và có thể không kịp hoàn thiện trong thời lượng của buổi lab.
 
 **Candidate nhóm chọn (1 bài duy nhất):**
 
 ```text
-
+Bot tự động gom và tra cứu quyết định chốt đồ án trong nhóm chat
 ```
 
 **Vì sao chọn (4-5 câu):**
