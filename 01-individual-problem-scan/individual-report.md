@@ -57,7 +57,7 @@ Giữ bài nào: actor cụ thể, workflow vẽ được 3-7 bước, bottlenec
 ```text
 Problem 1 câu: Gửi CV cho nhiều nơi tốn quá nhiều thời gian vì phải tinh chỉnh thủ công từng từ khóa, kỹ năng để khớp với mô tả công việc (JD) của từng vị trí.
 
-Actor: Sinh viên, ứng viên tìm việc.
+Actor: Sinh viên năm 3-4 / mới tốt nghiệp ngành CNTT (Data/AI/Backend), đã có ít nhất 1-2 dự án hoặc kỳ thực tập để đưa vào CV.
 
 Thời điểm / bối cảnh: Khi nộp hồ sơ xin việc, thực tập, cần tùy biến CV gốc cho phù hợp với yêu cầu cụ thể của từng công ty để vượt qua vòng lọc hồ sơ.
 
@@ -68,13 +68,15 @@ Current workflow 3-7 bước:
 4. Chỉnh sửa cách diễn đạt, viết lại các gạch đầu dòng (bullet points) để chứa các từ khóa từ JD.
 5. Kiểm tra lại format và lưu thành file PDF mới.
 
-Bottleneck: Bước 3 và 4 (Tìm ý và viết lại diễn đạt) là bước mất nhiều thời gian nhất và dễ bị "bí" ý tưởng diễn đạt.
+Bottleneck: 
+- Bottleneck chính (AI xử lý được): diễn đạt lại ý đã có sẵn cho khớp từ khóa JD.
+- Rủi ro cần kiểm soát (AI không được tự xử lý): khi ứng viên thực sự thiếu kinh nghiệm khớp JD, AI dễ suy diễn/bịa — phải chặn bằng bước xác nhận của người dùng trước khi xuất.
 
 Impact: Rút ngắn thời gian chuẩn bị một bộ hồ sơ, giúp ứng viên nộp được nhiều công ty hơn với chất lượng CV cao hơn.
 
-Success metric: Giảm thời gian tùy biến một CV từ 45-60 phút xuống dưới 15 phút.
+Success metric: Giảm thời gian tạo CV từ 45-60' xuống <15', và tỷ lệ bullet do AI đề xuất được giữ nguyên/chỉnh nhẹ (không viết lại hoàn toàn) đạt >70% ở bước review.
 
-Non-AI alternative: Tạo sẵn 3-4 phiên bản CV khác nhau cho các hướng công việc chung (ví dụ: một bản thiên về Data, một bản thiên về AI, một bản thiên về Backend), khi nộp chỉ cần chọn bản gần giống nhất (Rule/Process fix).
+Non-AI alternative: Tạo sẵn 3-4 phiên bản CV khác nhau cho các hướng công việc chung (ví dụ: một bản thiên về Data, một bản thiên về AI, một bản thiên về Backend), khi nộp chỉ cần chọn bản gần giống nhất (Rule/Process fix). Ngoài ra so sánh 2-3 JD thật cùng hướng (vd Data Analyst ở 3 công ty) → % từ khóa trùng nhau là bao nhiêu? Nếu overlap thấp (<50%) → xác nhận rule/process không đủ. Nếu cao → cân nhắc dừng ở non-AI fix.
 
 AI hypothesis: AI có thể đối chiếu nội dung CV gốc và JD, tự động đề xuất những bullet points cần viết lại, và tạo bản nháp chứa các từ khóa phù hợp.
 
@@ -97,12 +99,11 @@ CURRENT STATE — 50 phút
 FUTURE STATE — 14 phút
 
 [Input JD & CV gốc vào AI: 1']
-→ [AI so khớp & đề xuất ý: 3']
-→ [AI draft nội dung: 2']
+→ [AI phân tích JD + CV gốc → xuất bullet đã viết lại, kèm chú thích từ khóa match từ JD: 5']
 → [Ứng viên review & edit: 7']  <-- human boundary
 → [Xuất PDF: 1']
 
-Fallback: nếu AI draft sai ngữ cảnh hoặc bịa kỹ năng, ứng viên phải tự sửa lại nội dung.
+Fallback: nếu AI draft sai ngữ cảnh hoặc "bịa" kỹ năng, ứng viên phải tự sửa lại nội dung hoặc dùng bản CV gốc.
 ```
 ---
 
@@ -218,9 +219,6 @@ FUTURE STATE — 35 phút
 
 Fallback: Nếu AI tóm tắt sai kiến trúc phương pháp hoặc hallucinate limitation không có trong bài, sinh viên phải quay về cách đọc truyền thống.
 ```
-
-File đính kèm: `01-individual-problem-scan-workflow-card-3.png`
-
 ---
 
 ### 2.3. Card muốn pitch nhất (chuẩn bị 2 phút)
@@ -228,26 +226,28 @@ File đính kèm: `01-individual-problem-scan-workflow-card-3.png`
 **Card tôi muốn pitch nhất:**
 
 ```text
-
+Card số 1
 ```
 
 **Vì sao (2-3 câu: workflow gì, số đo gì, impact gì):**
 
 ```text
-
+Bài toán tùy biến CV có workflow rất thực tế (Đọc JD → Tìm ý → Viết lại) và điểm nghẽn (bottleneck) dễ định lượng: ứng viên thường mất khoảng 45-60 phút để chỉnh sửa từ khóa và cách diễn đạt cho một bản CV. Impact mang lại cực kỳ rõ rệt: giảm thiểu rủi ro bị loại bởi hệ thống lọc hồ sơ (ATS) và giúp ứng viên nộp được nhiều công ty hơn với chất lượng CV đồng đều trong thời gian ngắn.
 ```
 
 **Câu hỏi tôi muốn nhóm challenge (1-2 câu hỏi đúng chỗ yếu):**
 
 ```text
+Câu 1: Ranh giới (boundary) giữa việc "AI giúp viết lại diễn đạt" và "AI bịa ra kỹ năng (hallucinate) mà ứng viên không có" nằm ở đâu, và làm sao để kiểm soát điều này trong thiết kế giải pháp?
 
+Câu 2: Việc giảm thời gian chỉnh sửa CV (từ 60 phút xuống 15 phút) có thực sự dẫn đến việc tăng tỷ lệ đỗ phỏng vấn không, hay chỉ dẫn đến việc nộp rác (spam) nhiều CV hơn?
 ```
 
 **AI phản biện Card (nếu có):**
-- Điểm yếu AI chỉ ra:
-- Tôi sửa gì:
+- Điểm yếu AI chỉ ra: Actor quá rộng; CV gốc chưa rõ; bottleneck gộp vấn đề diễn đạt và nguy cơ AI bịa kinh nghiệm; metric chỉ đo thời gian; chưa có số liệu chứng minh template là chưa đủ; 3 bước AI có thể gộp thành một lệnh.
+- Tôi đã sửa: Thu hẹp Actor về sinh viên năm 3–4 hoặc mới ra trường ngành CNTT, có 1–2 dự án. Định nghĩa CV gốc là bản tổng hợp đầy đủ. Tách bottleneck thành diễn đạt lại và kiểm chứng kinh nghiệm. Thêm metric chất lượng dựa trên tỷ lệ bullet được giữ sau review. So sánh với JD thực tế để đo overlap từ khóa, đồng thời gộp 3 bước AI thành một bước single-shot.
 
 ### Self-check nộp phần 01
-- [ ] Có 5+ problems + top 3 Cards đủ field
-- [ ] Mỗi Card có workflow trước/sau + bottleneck + metric + fallback
-- [ ] Đã chọn 1 card pitch + câu hỏi challenge
+- [x] Có 5+ problems + top 3 Cards đủ field
+- [x] Mỗi Card có workflow trước/sau + bottleneck + metric + fallback
+- [x] Đã chọn 1 card pitch + câu hỏi challenge
