@@ -24,8 +24,6 @@
 | 7 | AI có thể tốt hơn | Search kém trên documentation của các framework lập trình, kết quả trả về thường mập mờ, không khớp ngữ cảnh của đoạn code đang viết. | Lập trình viên | Mất 15 phút liên tục đổi từ khóa, phải thoát ra dùng công cụ tìm kiếm bên ngoài thay thế |
 | 8 | Tốn thời gian | Gửi CV cho nhiều nơi, mỗi vị trí yêu cầu một trọng tâm khác nhau nên phải tìm hiểu mô tả công việc (JD) và tinh chỉnh, viết lại CV cho phù hợp với từng nơi. | Sinh viên, ứng viên tìm việc | Mất 45 phút - 1 tiếng cho mỗi lần nộp đơn chỉ để đối chiếu JD, chọn lọc lại các dự án/kỹ năng từ CV gốc và sửa cách diễn đạt; dễ bị sót các từ khóa quan trọng mà nhà tuyển dụng yêu cầu. |
 
-> Gợi ý tự soi: tuần trước mất nhiều thời gian nhất vào việc gì? Việc gì hay trì hoãn? Người khác hay hỏi lại câu gì? Workflow nào ai cũng biết là chậm?
-
 **AI đã dùng ở Phase 1 (nếu có):**
 - Prompt đã hỏi: Đưa ra 8 vấn đề liên quan tới các lĩnh vực lừa đảo, học tập, công việc, thực tập
 - Ý dùng được: Hầu hết các ý đều dùng được
@@ -46,9 +44,9 @@ Giữ bài nào: actor cụ thể, workflow vẽ được 3-7 bước, bottlenec
 
 | Rank | Problem (copy từ bảng scan) | Vì sao chọn (2-3 ý) | Điều còn chưa chắc |
 |---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | Gửi CV cho nhiều nơi, mỗi vị trí yêu cầu một trọng tâm khác nhau nên phải tìm hiểu mô tả công việc (JD) và tinh chỉnh, viết lại CV cho phù hợp với từng nơi. | - Actor (ứng viên) và workflow rất rõ ràng (Đọc JD -> Lọc kỹ năng/dự án -> Viết lại diễn đạt -> Lưu PDF).<br>- Điểm nghẽn cực kỳ cụ thể (mất 45-60 phút chỉ để tinh chỉnh từ khóa cho 1 CV).<br>- Bài toán có scope gọn, dễ dàng so sánh giữa việc tự làm (No AI) và dùng AI đối chiếu JD. | AI có thể bịa (hallucinate) kỹ năng hoặc kinh nghiệm mà người dùng không có nếu đầu vào không được giới hạn chặt chẽ; khó đo lường ngay lập tức xem CV có tăng tỷ lệ qua vòng lọc hay không. |
+| 2 | Lừa đảo tài chính qua cuộc gọi mạo danh đang rất tinh vi. Cần một trợ lý AI chạy thời gian thực để phân tích ngữ cảnh, tính Risk Score và cảnh báo tự động. | - Có giá trị thực tiễn và impact xã hội rất cao.<br>- Thể hiện cực kỳ rõ ranh giới giới hạn của hệ thống cũ (Rule-based/danh sách đen) và sự cần thiết của phân tích ngữ cảnh (Agent/AI). | Bài toán có scope khá rộng và phức tạp đối với một buổi lab; vấn đề độ trễ (latency) khi xử lý Speech-to-Text và LLM theo thời gian thực có thể là rào cản kỹ thuật. |
+| 3 | Tổng hợp các bài báo để tìm vấn đề (Mất 2-3 tiếng/paper chỉ để tóm tắt và tìm ra limitation của bài báo). | - Nỗi đau có thật và lặp lại liên tục với tần suất cao.<br>- Workflow trích xuất thông tin rõ (Đọc Abstract -> Tìm kiếm phương pháp -> Rút trích Limitation).<br>- Có thể đo lường impact trực tiếp thông qua thời gian tiết kiệm được trên mỗi paper. | Khi đối mặt với các bài báo chuyên sâu có nhiều công thức toán học hoặc kiến trúc mô hình học máy phức tạp, AI đọc PDF có thể hiểu sai ngữ cảnh hoặc trích xuất sai bản chất của limitation. |
 
 ### 2.2. Problem Cards chi tiết (lặp lại cho cả 3 cards)
 
