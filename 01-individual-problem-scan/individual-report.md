@@ -52,140 +52,148 @@ Giữ bài nào: actor cụ thể, workflow vẽ được 3-7 bước, bottlenec
 
 ---
 
-#### Problem Card #1 — [Tên problem]
+#### Problem Card #1 — [CV]
 
 ```text
-Problem 1 câu:
+**Problem 1 câu:** Gửi CV cho nhiều nơi tốn quá nhiều thời gian vì phải tinh chỉnh thủ công từng từ khóa, kỹ năng để khớp với mô tả công việc (JD) của từng vị trí.
 
-Actor:
+**Actor:** Sinh viên, ứng viên tìm việc.
 
-Thời điểm / bối cảnh:
+**Thời điểm / bối cảnh:** Khi nộp hồ sơ xin việc, thực tập, cần tùy biến CV gốc cho phù hợp với yêu cầu cụ thể của từng công ty để vượt qua vòng lọc hồ sơ.
 
-Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
+**Current workflow 3-7 bước:**
+1. Đọc kỹ JD để xác định các từ khóa, kỹ năng và kinh nghiệm trọng tâm.
+2. Mở file CV gốc (Word/Canva).
+3. Rà soát lại toàn bộ dự án, kinh nghiệm đã làm để chọn lọc những ý liên quan đến JD.
+4. Chỉnh sửa cách diễn đạt, viết lại các gạch đầu dòng (bullet points) để chứa các từ khóa từ JD.
+5. Kiểm tra lại format và lưu thành file PDF mới.
 
-Bottleneck:
+**Bottleneck:** Bước 3 và 4 (Tìm ý và viết lại diễn đạt) là bước mất nhiều thời gian nhất và dễ bị "bí" ý tưởng diễn đạt.
 
-Impact:
+**Impact:** Rút ngắn thời gian chuẩn bị một bộ hồ sơ, giúp ứng viên nộp được nhiều công ty hơn với chất lượng CV cao hơn.
 
-Success metric:
+**Success metric:** Giảm thời gian tùy biến một CV từ 45-60 phút xuống dưới 15 phút.
 
-Non-AI alternative:
+**Non-AI alternative:** Tạo sẵn 3-4 phiên bản CV khác nhau cho các hướng công việc chung (ví dụ: một bản thiên về Data, một bản thiên về AI, một bản thiên về Backend), khi nộp chỉ cần chọn bản gần giống nhất (Rule/Process fix).
 
-AI hypothesis:
+**AI hypothesis:** AI có thể đối chiếu nội dung CV gốc và JD, tự động đề xuất những bullet points cần viết lại, và tạo bản nháp chứa các từ khóa phù hợp.
 
-Quick gut:
+**Quick gut:**
 [ ] No AI / process fix
 [ ] Rule
-[ ] Workflow
+[x] Workflow
 [ ] Agent
 [ ] Chưa biết
-```
-
-**Draft workflow Card #1** (ASCII / Mermaid / ảnh đính kèm):
 
 ```text
-CURRENT STATE — ___ phút
+CURRENT STATE — 50 phút
 
-[1 ...: __'] → [2 ...: __'] → [3 ...: __'] → [4 ...: __']  <-- bottleneck
+[Đọc JD: 5']
+→ [Mở CV gốc: 2']
+→ [Lọc dự án liên quan: 15']
+→ [Viết lại gạch đầu dòng: 25']  <-- bottleneck
+→ [Review & Xuất PDF: 3']
 
-FUTURE STATE — ___ phút
+FUTURE STATE — 14 phút
 
-[1 ...: __'] → [2 ...: __'] → [3 ... review: __']  <-- human boundary
+[Input JD & CV gốc vào AI: 1']
+→ [AI so khớp & đề xuất ý: 3']
+→ [AI draft nội dung: 2']
+→ [Ứng viên review & edit: 7']  <-- human boundary
+→ [Xuất PDF: 1']
 
-Fallback: nếu AI sai thì ...
+Fallback: nếu AI draft sai ngữ cảnh hoặc bịa kỹ năng, ứng viên phải tự sửa lại nội dung.
 ```
-
-File đính kèm (nếu vẽ riêng): `01-individual-problem-scan-workflow-card-1.png`
-
 ---
 
-#### Problem Card #2 — [Tên problem]
+#### Problem Card #2 — [Lừa đảo qua điện thoại]
 
 ```text
-Problem 1 câu:
+**Problem 1 câu:** Lừa đảo tài chính qua điện thoại sử dụng kịch bản mạo danh liên tục thay đổi, ép người dùng chuyển tiền hoặc cung cấp OTP, vượt qua các bộ lọc số điện thoại truyền thống.
 
-Actor:
+**Actor:** Người dùng điện thoại (đặc biệt là người lớn tuổi, ít am hiểu công nghệ).
 
-Thời điểm / bối cảnh:
+**Thời điểm / bối cảnh:** Nghe các cuộc gọi lạ, bị kẻ gian dọa nạt, tạo áp lực thời gian (giả danh công an, nhân viên ngân hàng, v.v.).
 
-Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
+**Current workflow 3-7 bước (Workflow phòng vệ hiện tại):**
+1. Nhận cuộc gọi từ số lạ.
+2. Nghe nội dung cuộc gọi.
+3. Người dùng tự đánh giá mức độ tin cậy dựa trên kinh nghiệm cá nhân.
+4. Nếu nghi ngờ, cúp máy hoặc tìm cách tra cứu thông tin (tốn thời gian, lúc bị áp lực thường quên).
+5. Nếu bị thuyết phục, thực hiện chuyển tiền/cung cấp OTP.
+6. (Hệ thống) Các app chặn cuộc gọi chỉ cảnh báo dựa trên danh sách đen (Blacklist) đã bị báo cáo từ trước.
 
-Bottleneck:
+**Bottleneck:** Bước 3 (Tự đánh giá) phụ thuộc hoàn toàn vào tâm lý người dùng tại thời điểm đó, và bước 6 (Chặn theo Blacklist) luôn đi sau kẻ lừa đảo (không chặn được số mới/VoIP).
 
-Impact:
+**Impact:** Ngăn chặn kịp thời các giao dịch lừa đảo, bảo vệ tài sản cho người dùng ngay tại thời điểm cuộc gọi diễn ra.
 
-Success metric:
+**Success metric:** Cảnh báo đúng các cuộc gọi lừa đảo kịch bản mới (chưa có trong blacklist) trong vòng 30-60 giây đầu tiên.
 
-Non-AI alternative:
+**Non-AI alternative:** Chặn hoàn toàn số lạ không có trong danh bạ (Rule) -> Ảnh hưởng đến các cuộc gọi giao hàng, công việc hợp lệ.
 
-AI hypothesis:
+**AI hypothesis:** Chạy Speech-to-Text cục bộ để nghe hội thoại, dùng LLM phân tích ngữ cảnh (nhận diện các mẫu câu đe dọa, đòi OTP, đòi chuyển khoản), tính điểm rủi ro và cảnh báo trực tiếp trên màn hình cuộc gọi.
 
-Quick gut:
+**Quick gut:**
 [ ] No AI / process fix
 [ ] Rule
 [ ] Workflow
-[ ] Agent
+[x] Agent
 [ ] Chưa biết
 ```
 
 **Draft workflow Card #2:**
 
 ```text
-CURRENT STATE — ___ phút
+CURRENT STATE — (Hệ thống phòng vệ hiện tại - Thụ động)
 
-[1 ...] → [2 ...] → [3 ...]  <-- bottleneck
+[Nhận cuộc gọi lạ]
+→ [App check Blacklist (nếu có): 1']
+→ [Người dùng nghe máy & bị thao túng tâm lý: 5-10']  <-- bottleneck (điểm mù bảo mật)
+→ [Thực hiện giao dịch mất tiền]
 
-FUTURE STATE — ___ phút
+FUTURE STATE — (Bảo vệ thời gian thực)
 
-[1 ...] → [2 ...] → [3 ... review]  <-- human boundary
+[Nhận cuộc gọi]
+→ [AI Speech-to-Text & phân tích liên tục: 1-2']
+→ [Phát hiện yếu tố đe dọa/OTP]
+→ [AI phát cảnh báo trên màn hình/âm thanh: 0.1']  <-- AI boundary
+→ [Người dùng quyết định cúp máy]
 
-Fallback: ...
+Fallback: Nếu AI sai (False Positive - cảnh báo nhầm cuộc gọi bình thường), người dùng vẫn có thể tiếp tục cuộc trò chuyện và tắt cảnh báo.
 ```
-
-File đính kèm: `01-individual-problem-scan-workflow-card-2.png`
 
 ---
 
-#### Problem Card #3 — [Tên problem]
+#### Problem Card #3 — [Đọc paper]
 
 ```text
-Problem 1 câu:
+**Problem 1 câu:** Đọc và tổng hợp tài liệu, bài báo nghiên cứu chuyên sâu mất quá nhiều thời gian chỉ để nắm bắt được kiến trúc mô hình và các điểm hạn chế (limitation) của nghiên cứu đó.
 
-Actor:
+**Actor:** Sinh viên, người làm nghiên cứu.
 
-Thời điểm / bối cảnh:
+**Thời điểm / bối cảnh:** Đọc tài liệu tham khảo để chuẩn bị làm tiểu luận, khóa luận, hoặc tạo slide báo cáo seminar.
 
-Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
+**Current workflow 3-7 bước:**
+1. Đọc phần Abstract và Introduction.
+2. Đọc lướt phần Related Work.
+3. Đọc kỹ phần Methodology (kiến trúc, phương pháp).
+4. Tìm và đọc phần Conclusion / Future Work để rút ra limitation.
+5. Ghi chú tóm tắt lại vào Notion/Word để đưa lên slide.
 
-Bottleneck:
+**Bottleneck:** Bước 3 (Đọc hiểu phương pháp) và Bước 4 (Tìm limitation) thường bị viết rải rác, ẩn ý trong bài, tốn nhiều thời gian đọc kỹ.
 
-Impact:
+**Impact:** Tăng tốc độ duyệt tài liệu nghiên cứu, giúp sinh viên tập trung thời gian vào việc suy nghĩ giải pháp thay vì việc trích xuất thông tin.
 
-Success metric:
+**Success metric:** Giảm thời gian tổng hợp ý chính và limitation của một bài báo từ 120-180 phút xuống còn 20-30 phút.
 
-Non-AI alternative:
+**Non-AI alternative:** Chỉ đọc Abstract và Conclusion, bỏ qua phần phương pháp (Cách này làm giảm chất lượng hiểu biết).
 
-AI hypothesis:
+**AI hypothesis:** AI có thể "đọc" toàn bộ PDF, trích xuất cấu trúc phương pháp và tóm tắt rõ ràng các limitation mà bài báo đã nêu hoặc ẩn ý.
 
-Quick gut:
+**Quick gut:**
 [ ] No AI / process fix
 [ ] Rule
-[ ] Workflow
+[x] Workflow
 [ ] Agent
 [ ] Chưa biết
 ```
@@ -193,15 +201,22 @@ Quick gut:
 **Draft workflow Card #3:**
 
 ```text
-CURRENT STATE — ___ phút
+CURRENT STATE — 150 phút
 
-[1 ...] → [2 ...] → [3 ...]  <-- bottleneck
+[Đọc Abstract/Intro: 15']
+→ [Đọc Methodology: 90']  <-- bottleneck (đọc hiểu cấu trúc phức tạp)
+→ [Tìm/Đọc Limitation: 30']
+→ [Ghi chú tóm tắt: 15']
 
-FUTURE STATE — ___ phút
+FUTURE STATE — 35 phút
 
-[1 ...] → [2 ...] → [3 ... review]  <-- human boundary
+[Upload PDF cho AI: 1']
+→ [AI trích xuất Methodology & Limitation: 4']
+→ [Sinh viên đọc bản tóm tắt của AI: 10']
+→ [Sinh viên kiểm chứng lại bằng cách đọc nhanh các phần AI chỉ ra trong PDF: 15'] <-- human boundary
+→ [Ghi chú lại ý cần thiết: 5']
 
-Fallback: ...
+Fallback: Nếu AI tóm tắt sai kiến trúc phương pháp hoặc hallucinate limitation không có trong bài, sinh viên phải quay về cách đọc truyền thống.
 ```
 
 File đính kèm: `01-individual-problem-scan-workflow-card-3.png`
