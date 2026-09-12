@@ -4,8 +4,8 @@
 
 ## Thông tin cá nhân
 
-- Họ và tên:
-- Mã học viên:
+- Họ và tên: 
+- Mã học viên: 
 - Vai trò / bối cảnh (VD: sinh viên năm X, intern PM, ...):
 - Công việc hằng tuần (3-5 gạch đầu dòng để soi problem):
 
@@ -13,20 +13,16 @@
 
 ## Phase 1 — Scan 5+ problems (tối thiểu 5, khuyến khích 8-10)
 
-**Cách điền:** mỗi dòng = việc gì + ai chịu + đo bằng gì. Cột `Dấu hiệu thật` bắt buộc có số: mất bao lâu (bấm giờ mấy lần), mấy lần/tuần, bao nhiêu người gặp, log/ticket/quote nào.
-
-| # | Lăng kính (Lặp lại / Tốn thời gian / AI có thể tốt hơn / Pain từ người khác) | Problem quan sát được | Ai chịu ảnh hưởng? | Dấu hiệu thật (số + bằng chứng) |
+| # | Lăng kính | Problem quan sát được | Ai chịu ảnh hưởng? | Dấu hiệu thật |
 |---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
-| 9 | | | | |
-| 10 | | | | |
+| 1 | AI có thể tốt hơn | Lừa đảo tài chính qua cuộc gọi mạo danh đang rất tinh vi để ép chuyển tiền, hệ thống phòng vệ truyền thống bất lực trước SIM rác, VoIP. Cần một trợ lý AI chạy thời gian thực (Speech-to-Text, NLP/LLM) để phân tích ngữ cảnh, tính Risk Score và cảnh báo tự động. | Người dùng điện thoại, người thân có đăng ký nhận thông báo | Bị áp lực tâm lý, lộ OTP và mất tiền; các thủ đoạn mới thay đổi liên tục khiến bộ lọc từ khóa/danh sách đen vô dụng |
+| 2 | Tốn thời gian | Tổng hợp các bài báo để tìm vấn đề. | Sinh viên, người làm nghiên cứu | Mất 2-3 tiếng/paper chỉ để tóm tắt và tìm ra limitation của bài báo. |
+| 3 | Lặp lại | Tìm lại quyết định/câu trả lời cũ trong Discord hoặc group chat về việc phân công task đồ án hoặc cách thiết lập mạng riêng ảo (VPN)/kết nối server. | Các thành viên trong nhóm làm đồ án chung | Mất 10-15 phút lướt lại tin nhắn cũ mỗi khi cần cấu hình môi trường lập trình mới |
+| 4 | Lặp lại | Nhắc việc định kỳ nhưng hay quên context, cụ thể là thao tác nhớ lịch và tiến hành gia hạn vé tháng xe buýt điện tử. | Người đi học/đi làm bằng phương tiện công cộng | Diễn ra đều đặn mỗi tháng một lần nhưng thỉnh thoảng vẫn bị trễ hạn, phải tốn tiền mua vé lượt |
+| 5 | Tốn thời gian | Tổng hợp báo cáo tuần về các chỉ số độ chính xác, hiệu suất của mô hình đang huấn luyện từ nhiều bảng log hoặc nền tảng thử nghiệm khác nhau. | Người huấn luyện mô hình học máy | Mất 30-45 phút mỗi cuối tuần để copy/paste thủ công dữ liệu rời rạc vào một định dạng báo cáo chuẩn |
+| 6 | Pain từ người khác | Hiểu task từ nhiều thread/tài liệu khi tiếp nhận các thiết bị phần cứng mới (như board mạch nhúng để chạy mô hình), do tài liệu cấu hình rải rác. | Sinh viên thực tập, kỹ sư phát triển | Tốn nửa ngày để setup xong môi trường; đồng đội thường xuyên phải hỗ trợ lại các bước cơ bản |
+| 7 | AI có thể tốt hơn | Search kém trên documentation của các framework lập trình, kết quả trả về thường mập mờ, không khớp ngữ cảnh của đoạn code đang viết. | Lập trình viên | Mất 15 phút liên tục đổi từ khóa, phải thoát ra dùng công cụ tìm kiếm bên ngoài thay thế |
+| 8 | Tốn thời gian | Gửi CV cho nhiều nơi, mỗi vị trí yêu cầu một trọng tâm khác nhau nên phải tìm hiểu mô tả công việc (JD) và tinh chỉnh, viết lại CV cho phù hợp với từng nơi. | Sinh viên, ứng viên tìm việc | Mất 45 phút - 1 tiếng cho mỗi lần nộp đơn chỉ để đối chiếu JD, chọn lọc lại các dự án/kỹ năng từ CV gốc và sửa cách diễn đạt; dễ bị sót các từ khóa quan trọng mà nhà tuyển dụng yêu cầu. |
 
 > Gợi ý tự soi: tuần trước mất nhiều thời gian nhất vào việc gì? Việc gì hay trì hoãn? Người khác hay hỏi lại câu gì? Workflow nào ai cũng biết là chậm?
 
